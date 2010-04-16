@@ -13,7 +13,8 @@ class AppTest < Test::Unit::TestCase
 		App
 	end
 
-  def test_fail
-    flunk 'Write your App tests!'
+  def test_root_is_accessible
+    get '/'
+    assert last_response.ok?
   end
 end
